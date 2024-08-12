@@ -1,8 +1,12 @@
+import NewProject from "./components/NewProject";
+import ProjectSideBar from "./components/ProjectSideBar";
+
 function App() {
   return (
-    <>
-      <h1 className="bg-red-700 lg:bg-green-400">hiifddfiii</h1>
-    </>
+    <main className="my-8 h-full flex gap-8">
+      <ProjectSideBar />
+      <NewProject/>
+    </main>
   );
 }
 
