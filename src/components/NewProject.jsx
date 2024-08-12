@@ -1,7 +1,3 @@
-
-
-import React from "react";
-// import Input from "./Test";
 import Test from "./Test";
 
 const NewProject = () => {
@@ -20,10 +16,9 @@ const NewProject = () => {
         </li>
       </menu>
       <div>
-        {/* <Input label="Title" />*/}
-        <Test label="Title"/>
+        <Test label="Title" />
         <Test label="Description" textarea />
-        <Test label="Due Date" /> 
+        <Test label="Due Date" />
       </div>
     </div>
   );

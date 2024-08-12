@@ -3,9 +3,9 @@ import ProjectSideBar from "./components/ProjectSideBar";
 
 function App() {
   return (
-    <main className="my-8 h-full flex gap-8">
+    <main className="my-8 flex h-full gap-8">
       <ProjectSideBar />
-      <NewProject/>
+      <NewProject />
     </main>
   );
 }
