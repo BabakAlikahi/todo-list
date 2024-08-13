@@ -42,7 +42,7 @@ export default function NewProject({ onAdd, onCancel }) {
           Please make sure you provide a valid value for every input field.
         </p>
       </Modal>
-      <div className="mt-16 w-[35rem]">
+      <div className="mt-16 px-6 md:w-[35rem] md:px-0">
         <menu className="my-4 flex items-center justify-end gap-4">
           <li>
             <button

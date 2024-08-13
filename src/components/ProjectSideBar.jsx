@@ -7,7 +7,7 @@ const ProjectSideBar = ({
   selectedProjectId,
 }) => {
   return (
-    <aside className="h-full w-1/3 rounded-r-xl bg-stone-900 px-8 py-16 text-stone-50 md:w-72">
+    <aside className="md:h-full w-full rounded-r-xl bg-stone-900 px-8 py-16 text-stone-50 md:w-72">
       <h2 className="mb-8 font-bold uppercase text-stone-200 md:text-xl">
         your projects
       </h2>

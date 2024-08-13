@@ -15,7 +15,7 @@ function SelectedProjects({
   });
 
   return (
-    <div className="mt-16 w-[35rem]">
+    <div className="mt-16 px-6 md:w-[35rem] md:px-0">
       <header className="mb-4 border-b-2 border-stone-300 pb-4">
         <div className="flex items-center justify-between">
           <h2 className="mb-2 text-3xl font-bold text-stone-600">

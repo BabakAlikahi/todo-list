@@ -111,7 +111,7 @@ function App() {
   }
 
   return (
-    <main className="my-8 flex h-screen gap-8">
+    <main className="my-8 md:flex h-auto md:h-screen gap-8">
       <ProjectSideBar
         onStartAddProject={handelStartAddProject}
         projects={projectsState.projects}
