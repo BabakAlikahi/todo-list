@@ -9,6 +9,7 @@ function App() {
   const [projectsState, setProjectState] = useState({
     selectedProjectId: undefined,
     projects: [],
+    tasks: [],
   });
 
   function handelSelectedProject(id) {
@@ -57,18 +58,49 @@ function App() {
         ...prevState,
         selectedProjectId: undefined,
         projects: prevState.projects.filter(
-          (project) => project.id!== prevState.selectedProjectId,
+          (project) => project.id !== prevState.selectedProjectId,
         ),
       };
     });
   }
 
+  function handelAddTask(enterTask) {
+    setProjectState((prevState) => {
+      const newTask = {
+        id: prevState.tasks.length + 1,
+        projectId: prevState.selectedProjectId,
+        enterTask: enterTask,
+      };
+      return {
+        ...prevState,
+        tasks: [newTask, ...prevState.tasks],
+      };
+    });
+  }
+  function handelDeleteTask(id) {
+    setProjectState((prevState) => {
+      return {
+        ...prevState,
+        tasks: prevState.tasks.filter(
+          (task) => task.id !== id,
+        ),
+      };
+    });
+  }
 
   const selectedProject = projectsState.projects.find(
     (project) => project.id === projectsState.selectedProjectId,
   );
 
-  let content = <SelectedProjects projects={selectedProject} onDeleteProject={handelDeleteProject}/>;
+  let content = (
+    <SelectedProjects
+      projects={selectedProject}
+      onDeleteProject={handelDeleteProject}
+      onAddTask={handelAddTask}
+      onDeleteTask={handelDeleteTask}
+      tasks={projectsState.tasks}
+    />
+  );
 
   if (projectsState.selectedProjectId === null) {
     content = (
@@ -84,6 +116,7 @@ function App() {
         onStartAddProject={handelStartAddProject}
         projects={projectsState.projects}
         onSelectedProject={handelSelectedProject}
+        selectedProjectId={projectsState.selectedProjectId}
       />
       {content}
     </main>

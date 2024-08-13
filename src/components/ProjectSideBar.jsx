@@ -19,9 +19,9 @@ const ProjectSideBar = ({
           let cssClasses =
             "my-1 w-full rounded-sm px-2 py-1 text-left text-stone-400 hover:bg-stone-800 hover:text-stone-200";
           if (project.id === selectedProjectId) {
-            cssClasses += "bg-stone-800 text-stone-200";
+            cssClasses += " bg-stone-800 text-stone-200";
           } else {
-            cssClasses += "text-stone-400";
+            cssClasses += " text-stone-400";
           }
           return (
             <li key={project.id}>
