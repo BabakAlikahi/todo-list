@@ -1,4 +1,4 @@
-import NewTask from "./newTask";
+import NewTask from "./NewTask";
 
 function Tasks({ tasks, onAddTask, onDeleteTask }) {
   return (
